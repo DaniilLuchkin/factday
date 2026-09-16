@@ -19,7 +19,7 @@
         <a href="#explore">Исследовать</a>
         <a href="#saved">Сохранённое <span class="saved-count">0</span></a>
       </nav>
-      <button class="profile-button" aria-label="Профиль">М</button>
+      <div class="topbar-actions"><button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">☾</button><button class="profile-button" aria-label="Профиль">М</button></div>
     </header>
 
     <main>
@@ -41,12 +41,16 @@
           <div class="card-bottom"><span id="fact-source">Источник: NASA</span><button class="share-button" id="share-button">Поделиться <span>↗</span></button></div>
         </div>
 
+        <div class="card-actions" aria-label="Реакции на факт">
+          <button class="action action-no" id="no-button" aria-label="Не нравится"><span>×</span><small>Не нравится</small></button>
+          <button class="action action-save" id="save-button" aria-label="Сохранить"><span>♡</span><small>Сохранить</small></button>
+          <button class="action action-yes" id="yes-button" aria-label="Нравится"><span>✓</span><small>Нравится</small></button>
+        </div>
+
         <aside class="side-panel">
           <div class="side-label">Настройте свою ленту</div>
           <p>Свайпайте карточки или выбирайте реакцию. Мы запомним, что вам интересно.</p>
           <div class="interest-meter"><div class="meter-copy"><span>Ваш профиль интересов</span><strong id="interest-status">Начинаем знакомство</strong></div><div class="meter"><span id="meter-fill"></span></div></div>
-          <div class="reaction-hint"><span class="hint-icon no">×</span><span>не моё</span><span class="hint-line"></span><span>моё</span><span class="hint-icon yes">✓</span></div>
-          <div class="actions"><button class="action action-no" id="no-button" aria-label="Не интересно">×</button><button class="action action-save" id="save-button" aria-label="Сохранить">♡</button><button class="action action-yes" id="yes-button" aria-label="Интересно">✓</button></div>
           <p class="swipe-note">или свайпайте карточку влево и вправо</p>
         </aside>
       </section>

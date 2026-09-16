@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f7f5ef" />
+    <link rel="manifest" href="manifest.json" />
     <title>Любопытно — факт дня</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,11 +14,11 @@
   <body>
     <div class="noise"></div>
     <header class="topbar">
-      <a class="brand" href="#"><span class="brand-mark">✳</span><span>любопытно</span></a>
+      <a class="brand" href="#today"><span class="brand-mark">✳</span><span>любопытно</span></a>
       <nav class="nav-links" aria-label="Основная навигация">
         <a class="active" href="#today">Сегодня</a>
         <a href="#explore">Исследовать</a>
-        <a href="#saved">Сохранённое <span class="saved-count">0</span></a>
+        <a href="#saved">Сохранённое <span class="saved-count" id="saved-count">0</span></a>
       </nav>
       <div class="topbar-actions"><button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">☾</button><button class="profile-button" aria-label="Профиль">М</button></div>
     </header>
@@ -53,6 +54,16 @@
       <section class="explore" id="explore">
         <div class="section-heading"><div><div class="eyebrow">категории</div><h2>Выберите тему</h2></div></div>
         <div class="category-grid" id="category-grid"></div>
+      </section>
+
+      <section class="saved-view" id="saved">
+        <div class="section-heading"><div><div class="eyebrow">избранное</div><h2>Сохранённые факты</h2></div><span class="saved-total" id="saved-total">0</span></div>
+        <div class="saved-grid" id="saved-grid"><p class="empty-state">Здесь появятся факты, которые вы сохраните.</p></div>
+      </section>
+
+      <section class="history-view" id="history">
+        <div class="section-heading"><div><div class="eyebrow">недавнее</div><h2>История</h2></div></div>
+        <div class="history-list" id="history-list"><p class="empty-state">История появится после первых реакций.</p></div>
       </section>
     </main>
     <div class="toast" id="toast" role="status"></div>

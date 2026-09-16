@@ -1,0 +1,10 @@
+{
+  "name": "Любопытно — факт дня",
+  "short_name": "Любопытно",
+  "description": "Персональная лента интересных фактов",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#245fd1",
+  "lang": "ru"
+}

@@ -46,6 +46,8 @@ body.dark #fact-source a{color:#f4f0e8}
 .history-view{max-width:1240px;margin:0 auto 90px;padding:0 34px}.history-list{margin-top:10px;border-top:1px solid var(--line)}.history-item{width:100%;display:flex;align-items:center;gap:20px;padding:17px 4px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);text-align:left;cursor:pointer}.history-index{font-size:11px;color:var(--muted);width:25px}.history-copy{display:flex;flex-direction:column;gap:5px;flex:1}.history-copy small{font-size:10px;color:var(--orange);text-transform:uppercase;letter-spacing:.12em}.history-copy strong{font:700 16px Manrope;letter-spacing:-.03em}.history-arrow{font-size:18px;color:var(--muted)}.history-item:hover .history-arrow{color:var(--orange)}
 @media(max-width:850px){.history-view{padding-left:24px;padding-right:24px}}@media(max-width:520px){.history-view{padding-left:16px;padding-right:16px;margin-bottom:60px}.history-item{gap:12px}.history-copy strong{font-size:14px}}
 main{padding-bottom:36px}
+html,body{overflow-x:hidden;overscroll-behavior-x:none}
+.fact-card{will-change:transform}
 .toast{bottom:calc(25px + env(safe-area-inset-bottom))}
 @media(max-width:520px){
   main{padding-bottom:48px}

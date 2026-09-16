@@ -83,7 +83,7 @@ function setupInteractions() {
   $('#theme-toggle').onclick = () => setTheme(!document.body.classList.contains('dark'));
   const card = $('#fact-card');
   card.addEventListener('pointerdown', (event) => { if (event.target.closest('button, a')) return; dragStartX = event.clientX; dragging = true; card.classList.add('dragging'); card.setPointerCapture(event.pointerId); });
-  card.addEventListener('pointermove', (event) => { if (!dragging) return; const difference = Math.max(-120, Math.min(120, event.clientX - dragStartX)); card.style.transform = `translateX(${difference}px) rotate(${difference / 24}deg)`; card.style.opacity = String(1 - Math.min(Math.abs(difference) / 600, .35)); });
+  card.addEventListener('pointermove', (event) => { if (!dragging || event.pointerType === 'touch') return; const difference = Math.max(-120, Math.min(120, event.clientX - dragStartX)); card.style.transform = `translateX(${difference}px) rotate(${difference / 24}deg)`; card.style.opacity = String(1 - Math.min(Math.abs(difference) / 600, .35)); });
   card.addEventListener('pointerup', (event) => { if (!dragging) return; dragging = false; const difference = event.clientX - dragStartX; card.classList.remove('dragging'); if (Math.abs(difference) > 75) react(difference > 0); else { card.style.transform = ''; card.style.opacity = '1'; } });
   card.addEventListener('pointercancel', () => { dragging = false; card.classList.remove('dragging'); card.style.transform = ''; card.style.opacity = '1'; });
 }

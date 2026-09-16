@@ -1,4 +1,4 @@
-const CACHE = 'factday-v1';
+const CACHE = 'factday-v2';
 const ASSETS = ['./', './index.html', './styles.css', './app.js', './facts.json', './manifest.json'];
 self.addEventListener('install', (event) => event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(ASSETS))));
 self.addEventListener('activate', (event) => event.waitUntil(self.clients.claim()));
